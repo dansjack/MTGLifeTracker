@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">MTGTest</string>
-    <string name="p1CurrScore"></string>
-    <string name="p2CurrScore"></string>
-    <string name="p2ScoreString">20</string>
-    <string name="p1ScoreString">20</string>
-    <string name="resetBtn">Resets scores of game</string>
+    <string name="p1Score">20</string>
+    <string name="p2Score">20</string>
+    <string name="p3Score">20</string>
+    <string name="p4Score">20</string>
     <string name="p1Name">Player 1</string>
     <string name="p2Name">Player 2</string>
+    <string name="p3Name">Player 3</string>
+    <string name="p4Name">Player 4</string>
+    <string name="resetBtn">Resets scores of game</string>
     <string name="player_opt_btn_bg_desc">Background for player options button</string>
+    <string name="player_opt_btn_desc">Button for player options</string>
 </resources>

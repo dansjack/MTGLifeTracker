@@ -33,16 +33,16 @@ public class TwoPlayerActivity extends AppCompatActivity {
         Button p1UpBtn = findViewById(R.id.p1UpBtn);
         Button p1DownBtn = findViewById(R.id.p1DownBtn);
 
-        Button p2UpBtn = findViewById(R.id.p2UpBtn);
-        Button p2DownBtn = findViewById(R.id.p2DownBtn);
+        Button p2UpBtn = findViewById(R.id.p2DownBtn);
+        Button p2DownBtn = findViewById(R.id.p2UpBtn);
 
         // get reset button
         ImageButton optBtn = findViewById(R.id.playerOptBtn);
 
 
         // get current scores for each player
-        final TextView p1CurrScore = findViewById(R.id.p1CurrScore);
-        final TextView p2CurrScore = findViewById(R.id.p2CurrScore);
+        final TextView p1CurrScore = findViewById(R.id.p1Score);
+        final TextView p2CurrScore = findViewById(R.id.p2Score);
 
         // set up click listeners for the up/down buttons:
         //   player 1
