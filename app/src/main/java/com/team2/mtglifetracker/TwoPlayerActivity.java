@@ -37,7 +37,7 @@ public class TwoPlayerActivity extends AppCompatActivity {
         Button p2DownBtn = findViewById(R.id.p2DownBtn);
 
         // get reset button
-        ImageButton optBtn = findViewById(R.id.player_opt_btn);
+        ImageButton optBtn = findViewById(R.id.playerOptBtn);
 
 
         // get current scores for each player

@@ -7,7 +7,9 @@
     <color name="p1_dark">#ba4c88</color>
     <color name="p2">#01cdfe</color>
     <color name="p2_dark">#0799ba</color>
-    <color name="p3">#40476d</color>
-    <color name="p4">#acbea3</color>
+    <color name="p3">#05ffa1</color>
+    <color name="p3_dark">#00cc7e</color>
+    <color name="p4">#b967ff</color>
+    <color name="p4_dark">#941aff</color>
     <color name="black">#000000</color>
 </resources>
