@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MTGLifeTracker</string>
+    <string name="app_name">MTGTest</string>
+    <string name="p1CurrScore"></string>
+    <string name="p2CurrScore"></string>
+    <string name="p2ScoreString">20</string>
+    <string name="p1ScoreString">20</string>
+    <string name="resetBtn">Resets scores of game</string>
+    <string name="p1Name">Player 1</string>
+    <string name="p2Name">Player 2</string>
+    <string name="player_opt_btn_bg_desc">Background for player options button</string>
 </resources>

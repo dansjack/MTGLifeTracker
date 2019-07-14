@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".TwoPlayerActivity">
+
+    <LinearLayout
+        android:id="@+id/p1Container"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p1TopGLine">
+
+        <Button
+            android:id="@+id/p1DownBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_p1sb"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/p1UpBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_p1ab"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/p2Container"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/p2BotGLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/p2UpBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_p2ab"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/p2DownBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_p2sb"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/p1CurrScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p1ScoreString"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/p1Container"
+        app:layout_constraintEnd_toEndOf="@+id/p1Container"
+        app:layout_constraintStart_toStartOf="@+id/p1Container"
+        app:layout_constraintTop_toBottomOf="@id/p1TopGLine" />
+
+    <TextView
+        android:id="@+id/p2CurrScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="-1"
+        android:scaleY="-1"
+        android:text="@string/p2ScoreString"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/p2BotGLine"
+        app:layout_constraintEnd_toEndOf="@+id/p2Container"
+        app:layout_constraintStart_toStartOf="@+id/p2Container"
+        app:layout_constraintTop_toTopOf="@+id/p2Container" />
+
+    <TextView
+        android:id="@+id/p1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p1Name"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/p1CurrScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p1TopGLine" />
+
+    <TextView
+        android:id="@+id/p2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="-1"
+        android:scaleY="-1"
+        android:text="@string/p2Name"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/p2BotGLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p2CurrScore" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/p2BotGLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/p1TopGLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <ImageView
+        android:id="@+id/player_opt_bg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/player_opt_btn_bg_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_lens_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/player_opt_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#0000"
+        android:contentDescription="Button for player options"
+        app:layout_constraintBottom_toBottomOf="@id/p1TopGLine"
+        app:layout_constraintEnd_toEndOf="@id/player_opt_bg"
+        app:layout_constraintStart_toStartOf="@id/player_opt_bg"
+        app:layout_constraintTop_toTopOf="@id/p2BotGLine"
+        app:srcCompat="@drawable/ic_gps_fixed_black_48dp" />
+
+</android.support.constraint.ConstraintLayout>
