@@ -3,14 +3,11 @@
     <color name="colorPrimary">#b967ff</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="p1">#ff71ce</color>
-    <color name="p1_dark">#ba4c88</color>
-    <color name="p2">#01cdfe</color>
-    <color name="p2_dark">#0799ba</color>
-    <color name="p3">#05ffa1</color>
-    <color name="p3_dark">#00cc7e</color>
-    <color name="p4">#b967ff</color>
-    <color name="p4_dark">#941aff</color>
+    <color name="pink">#ff71ce</color>
+    <color name="blue">#01cdfe</color>
+    <color name="green">#05ffa1</color>
+    <color name="purple">#b967ff</color>
+    <color name="yellow">#fffb96</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
 </resources>

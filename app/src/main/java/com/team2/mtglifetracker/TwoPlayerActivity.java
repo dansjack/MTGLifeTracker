@@ -1,7 +1,12 @@
 package com.team2.mtglifetracker;
 
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -40,10 +45,29 @@ public class TwoPlayerActivity extends AppCompatActivity {
         // get reset button
         ImageButton optBtn = findViewById(R.id.playerOptBtn);
 
-
         // get current scores for each player
         final TextView p1CurrScore = findViewById(R.id.p1Score);
         final TextView p2CurrScore = findViewById(R.id.p2Score);
+
+        // change color demo:
+        // (see https://stackoverflow.com/questions/17823451/set-android-shape-color-programmatically
+        // for details)
+
+        // get container backgrounds for each player
+        Drawable p1ContainerBg = findViewById(R.id.p1Container).getBackground().mutate();
+        Drawable p2ContainerBg = findViewById(R.id.p2Container).getBackground().mutate();
+
+        if (p1ContainerBg instanceof ShapeDrawable) {
+            ((ShapeDrawable)p1ContainerBg).getPaint()
+                    .setColor(ContextCompat.getColor(this,R.color.green));
+        } else if (p1ContainerBg instanceof GradientDrawable) {
+            ((GradientDrawable)p1ContainerBg)
+                    .setColor(ContextCompat.getColor(this,R.color.green));
+        } else if (p1ContainerBg instanceof ColorDrawable) {
+            ((ColorDrawable)p1ContainerBg)
+                    .setColor(ContextCompat.getColor(this,R.color.green));
+        }
+
 
         // set up click listeners for the up/down buttons:
         //   player 1
