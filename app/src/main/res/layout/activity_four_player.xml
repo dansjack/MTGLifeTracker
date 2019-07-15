@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p1_layout"
+            android:background="@drawable/round_p1_a4_layout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -62,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p1_layout"
+            android:background="@drawable/round_p1_a4_layout"
             android:rotation="180"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
@@ -88,7 +88,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_layout"
+            android:background="@drawable/round_p2_a4_layout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -98,7 +98,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_layout"
+            android:background="@drawable/round_p2_a4_layout"
             android:rotation="180"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

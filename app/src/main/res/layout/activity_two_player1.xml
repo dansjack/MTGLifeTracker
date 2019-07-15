@@ -12,7 +12,7 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,27 +20,27 @@
         app:layout_constraintTop_toBottomOf="@+id/p1TopG">
 
         <Button
-            android:id="@+id/p1DownBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/round_p1_layout"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
             android:id="@+id/p1UpBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/round_p1_layout"
+            android:background="@drawable/round_p1_a2_layout"
             android:rotation="180"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/p1DownBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/round_p1_a2_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 
@@ -49,7 +49,7 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="2"
         app:layout_constraintBottom_toTopOf="@+id/p2BottomG"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,10 +59,11 @@
         <Button
             android:id="@+id/p2DownBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_layout"
+            android:background="@drawable/round_p2_a2_layout"
+            android:rotation="180"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,11 +72,10 @@
         <Button
             android:id="@+id/p2UpBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_layout"
-            android:rotation="180"
+            android:background="@drawable/round_p2_a2_layout"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent" />

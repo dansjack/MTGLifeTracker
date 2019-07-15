@@ -27,14 +27,15 @@ public class TwoPlayerActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
-        setContentView(R.layout.activity_two_player);
+        // Select two-player layout type
+        setContentView(R.layout.activity_two_player2);
 
         // get up/down buttons for each player
         Button p1UpBtn = findViewById(R.id.p1UpBtn);
         Button p1DownBtn = findViewById(R.id.p1DownBtn);
 
-        Button p2UpBtn = findViewById(R.id.p2DownBtn);
-        Button p2DownBtn = findViewById(R.id.p2UpBtn);
+        Button p2UpBtn = findViewById(R.id.p2UpBtn);
+        Button p2DownBtn = findViewById(R.id.p2DownBtn);
 
         // get reset button
         ImageButton optBtn = findViewById(R.id.playerOptBtn);
