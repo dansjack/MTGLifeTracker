@@ -27,7 +27,7 @@ public class FourPlayerActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
-        setContentView(R.layout.activity_four_player);
+        setContentView(R.layout.activity_four_player2);
 
         // get up/down buttons for each player
         Button p1UpBtn = findViewById(R.id.p1UpBtn);
