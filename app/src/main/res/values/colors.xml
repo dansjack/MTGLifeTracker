@@ -12,4 +12,5 @@
     <color name="p4">#b967ff</color>
     <color name="p4_dark">#941aff</color>
     <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

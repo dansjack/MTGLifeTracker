@@ -41,6 +41,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:background="@drawable/container1_bg"
         app:layout_constraintBottom_toTopOf="@id/hG2"
         app:layout_constraintEnd_toEndOf="@id/vLeftG"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p1_a4_layout"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -62,8 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p1_a4_layout"
-            android:rotation="180"
+            android:background="?attr/selectableItemBackground"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -77,6 +77,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:background="@drawable/container2_bg"
         app:layout_constraintBottom_toTopOf="@id/hG2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/vRightG"
@@ -88,7 +89,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_a4_layout"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -98,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p2_a4_layout"
+            android:background="?attr/selectableItemBackground"
             android:rotation="180"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -110,6 +111,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:background="@drawable/container3_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/vLeftG"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p3_layout"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -131,8 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p3_layout"
-            android:rotation="180"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
@@ -143,6 +144,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:background="@drawable/container4_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/vRightG"
@@ -154,7 +156,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p4_layout"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -164,8 +166,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/round_p4_layout"
-            android:rotation="180"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
