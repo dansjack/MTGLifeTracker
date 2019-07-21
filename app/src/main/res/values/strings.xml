@@ -11,4 +11,5 @@
     <string name="resetBtn">Resets scores of game</string>
     <string name="player_opt_btn_bg_desc">Background for player options button</string>
     <string name="player_opt_btn_desc">Button for player options</string>
+    <string name="set_players">Set Players</string>
 </resources>
