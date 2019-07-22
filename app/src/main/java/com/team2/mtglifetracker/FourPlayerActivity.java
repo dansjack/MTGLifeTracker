@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class FourPlayerActivity extends AppCompatActivity {
+    int layoutType = 2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,9 +31,19 @@ public class FourPlayerActivity extends AppCompatActivity {
 
         // enable full screen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_four_player1);
+        // determine content view
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            layoutType = extras.getInt("layoutType");
+        }
+
+        if (layoutType == 2) {
+            setContentView(R.layout.activity_four_player2);
+        } else if (layoutType == 1) {
+            setContentView(R.layout.activity_four_player1);
+        }
 
         // get up/down buttons for each player
         Button p1UpBtn = findViewById(R.id.p1UpBtn);

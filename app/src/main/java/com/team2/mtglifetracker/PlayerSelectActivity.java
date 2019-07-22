@@ -1,5 +1,6 @@
 package com.team2.mtglifetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class PlayerSelectActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,16 +35,23 @@ public class PlayerSelectActivity extends AppCompatActivity {
         select2PBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PlayerSelectActivity.this, "Selects 2 player game",
-                        Toast.LENGTH_SHORT).show();
+                // on click, send user to two player layout selection screen and store choice
+                // v.getContext() tip comes from:
+                // https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
+                Intent layoutSelectIntent = new Intent(v.getContext(), LayoutSelectActivity.class );
+                layoutSelectIntent.putExtra("playerSelectCount", 2);
+                startActivity(layoutSelectIntent);
+
             }
         });
 
         select4PBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PlayerSelectActivity.this, "Selects 4 player game",
-                        Toast.LENGTH_SHORT).show();
+                // on click, send user to two player layout selection screen and store choice
+                Intent layoutSelectIntent = new Intent(v.getContext(), LayoutSelectActivity.class );
+                layoutSelectIntent.putExtra("playerSelectCount", 4);
+                startActivity(layoutSelectIntent);
 
             }
         });

@@ -1,5 +1,6 @@
 package com.team2.mtglifetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,14 +8,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class LayoutSelectActivity extends AppCompatActivity {
+    int playerCount = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         // this removes the title bar from the activity
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -26,7 +26,19 @@ public class LayoutSelectActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_layout_select_2p);
+
+        // determine content view
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            playerCount = extras.getInt("playerSelectCount");
+        }
+
+        if (playerCount == 2) {
+            setContentView(R.layout.activity_layout_select_2p);
+        } else if (playerCount == 4) {
+            setContentView(R.layout.activity_layout_select_4p);
+        }
+
 
         Button layout1Btn = findViewById(R.id.l1Btn);
         Button layout2Btn = findViewById(R.id.l2Btn);
@@ -34,15 +46,38 @@ public class LayoutSelectActivity extends AppCompatActivity {
         layout1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LayoutSelectActivity.this, "Selects left layout", Toast.LENGTH_SHORT).show();
+                if (playerCount == 2) {
+                    Intent gameSelectIntent = new Intent(v.getContext(), TwoPlayerActivity.class );
+                    gameSelectIntent.putExtra("layoutType", 2);
+                    startActivity(gameSelectIntent);
+                } else if (playerCount == 4) {
+                    Intent gameSelectIntent = new Intent(v.getContext(), FourPlayerActivity.class );
+                    gameSelectIntent.putExtra("layoutType", 1);
+                    startActivity(gameSelectIntent);
+                } else {
+                    Intent mainIntent = new Intent(v.getContext(), MainActivity.class );
+                    startActivity(mainIntent);
+                }
             }
         });
 
         layout2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LayoutSelectActivity.this, "Selects right layout", Toast.LENGTH_SHORT).show();
+                if (playerCount == 2) {
+                    Intent gameSelectIntent = new Intent(v.getContext(), TwoPlayerActivity.class );
+                    gameSelectIntent.putExtra("layoutType", 1);
+                    startActivity(gameSelectIntent);
+                } else if (playerCount == 4) {
+                    Intent gameSelectIntent = new Intent(v.getContext(), FourPlayerActivity.class );
+                    gameSelectIntent.putExtra("layoutType", 2);
+                    startActivity(gameSelectIntent);
+                } else {
+                    Intent mainIntent = new Intent(v.getContext(), MainActivity.class );
+                    startActivity(mainIntent);
+                }
             }
+
         });
     }
 }
