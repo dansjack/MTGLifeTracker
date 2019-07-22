@@ -17,7 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TwoPlayerActivity extends AppCompatActivity {
-    // ADD GUIDELINES FOR MIDDLE BUTTON IN LAYOUT
+    int layoutType = 1;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +31,19 @@ public class TwoPlayerActivity extends AppCompatActivity {
 
         // enable full screen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        // Select two-player layout type
-        setContentView(R.layout.activity_two_player2);
+        // determine content view
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            layoutType = extras.getInt("layoutType");
+        }
+
+        if (layoutType == 2) {
+            setContentView(R.layout.activity_two_player2);
+        } else if (layoutType == 1) {
+            setContentView(R.layout.activity_two_player1);
+        }
 
         // get up/down buttons for each player
         Button p1UpBtn = findViewById(R.id.p1UpBtn);
