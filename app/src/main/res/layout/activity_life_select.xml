@@ -8,22 +8,20 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="383dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/lifecountLayout"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
         android:background="@drawable/container1_bg"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="@id/ctrGuidelineTop"
+        app:layout_constraintTop_toTopOf="@id/topGuideline">
 
         <TextView
             android:id="@+id/chooseLifecount"
-            android:layout_width="380dp"
-            android:layout_height="177dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginBottom="136dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="CHOOSE LIFECOUNT"
             android:textAlignment="center"
@@ -32,22 +30,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="379dp"
-        android:layout_height="280dp"
-        android:layout_marginBottom="0dp"
+        android:id="@+id/lifeIntLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/container2_bg"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btmGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout"
+        app:layout_constraintTop_toTopOf="@id/ctrGuidelineBtm">
 
 
         <Button
             android:id="@+id/lifeUpBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="89dp"
+            android:layout_height="88dp"
             android:background="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="+ 10"
@@ -79,6 +78,20 @@
     </LinearLayout>
 
     <android.support.constraint.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".020" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/textGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20" />
+
+    <android.support.constraint.Guideline
         android:id="@+id/ctrGuidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,10 +108,10 @@
         app:layout_constraintGuide_percent=".590" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/btmGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="10dp"
-        app:layout_constraintGuide_percent=".02" />
+        app:layout_constraintGuide_percent=".98" />
+
 </android.support.constraint.ConstraintLayout>
