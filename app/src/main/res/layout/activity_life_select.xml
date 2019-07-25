@@ -19,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/chooseLifecount"
             android:layout_width="380dp"
             android:layout_height="177dp"
             android:layout_marginTop="56dp"
             android:layout_marginBottom="136dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Choose lifecount :"
+            android:text="CHOOSE LIFECOUNT"
             android:textAlignment="center"
             android:textColor="#3F51B5"
             android:textSize="56sp" />
@@ -42,11 +42,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
+
+        <Button
+            android:id="@+id/lifeUpBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:background="?attr/selectableItemBackground"
+            android:stateListAnimator="@null"
+            android:text="+ 10"
+            android:textSize="30sp" />
+
         <TextView
-            android:id="@+id/p1Score"
-            android:layout_width="wrap_content"
+            android:id="@+id/lifecount"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/p1Score"
+            android:text="@string/defaultLife"
             android:textAlignment="center"
             android:textColor="#333333"
             android:textSize="72sp"
@@ -56,5 +67,38 @@
             app:layout_constraintStart_toStartOf="@+id/p1Container"
             app:layout_constraintTop_toTopOf="@id/p1Container" />
 
+        <Button
+            android:id="@+id/lifeDwnBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="- 10"
+            android:textSize="30sp" />
+
     </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/ctrGuidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="4dp"
+        app:layout_constraintGuide_percent=".570" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/ctrGuidelineBtm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="432dp"
+        app:layout_constraintGuide_percent=".590" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp"
+        app:layout_constraintGuide_percent=".02" />
 </android.support.constraint.ConstraintLayout>
