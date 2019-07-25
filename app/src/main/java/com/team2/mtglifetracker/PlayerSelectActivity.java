@@ -28,6 +28,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
 
         // get buttons
         ImageButton select2PBtn = findViewById(R.id.twoPlayerBtn);
+        ImageButton select3PBtn = findViewById(R.id.threePlayerBtn);
         ImageButton select4PBtn = findViewById(R.id.fourPlayerBtn);
 
         // TODO: get life start selection from previous activity
@@ -40,6 +41,18 @@ public class PlayerSelectActivity extends AppCompatActivity {
                 // https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
                 Intent layoutSelectIntent = new Intent(v.getContext(), LayoutSelectActivity.class );
                 layoutSelectIntent.putExtra("playerSelectCount", 2);
+                startActivity(layoutSelectIntent);
+
+            }
+        });
+
+        select3PBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // on click, send user to two player layout selection screen and store choice
+                // v.getContext() tip comes from:
+                // https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
+                Intent layoutSelectIntent = new Intent(v.getContext(), ThreePlayerActivity.class );
                 startActivity(layoutSelectIntent);
 
             }
