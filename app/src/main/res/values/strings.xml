@@ -13,4 +13,5 @@
     <string name="player_opt_btn_desc">Button for player options</string>
     <string name="set_players">Set Players</string>
     <string name="choose_layout">Choose Layout</string>
+    <string name="defaultLife">20</string>
 </resources>
