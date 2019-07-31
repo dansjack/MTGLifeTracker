@@ -138,39 +138,6 @@
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/p4Container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:background="@drawable/container4_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/vRightG"
-        app:layout_constraintTop_toBottomOf="@id/hG1">
-
-        <Button
-            android:id="@+id/p4UpBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/p4DownBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </LinearLayout>
-
     <TextView
         android:id="@+id/p1Score"
         android:layout_width="wrap_content"
@@ -260,36 +227,6 @@
         app:layout_constraintEnd_toEndOf="@id/p3Container"
         app:layout_constraintStart_toEndOf="@id/p3Score"
         app:layout_constraintTop_toTopOf="@id/p3Container" />
-
-    <TextView
-        android:id="@+id/p4Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-90"
-        android:text="@string/p4Score"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="72sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/p4Container"
-        app:layout_constraintEnd_toEndOf="@id/p4Container"
-        app:layout_constraintStart_toStartOf="@id/p4Container"
-        app:layout_constraintTop_toTopOf="@id/p4Container" />
-
-    <TextView
-        android:id="@+id/p4Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-90"
-        android:text="@string/p4Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/p4Container"
-        app:layout_constraintEnd_toStartOf="@id/p4Score"
-        app:layout_constraintStart_toStartOf="@id/p4Container"
-        app:layout_constraintTop_toTopOf="@id/p4Container" />
 
     <ImageView
         android:id="@+id/playerOptBg"

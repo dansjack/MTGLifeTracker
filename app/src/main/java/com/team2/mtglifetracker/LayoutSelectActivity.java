@@ -30,7 +30,7 @@ public class LayoutSelectActivity extends AppCompatActivity {
         // determine content view
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            playerCount = extras.getInt("playerSelectCount");
+            playerCount = extras.getInt("playerCount");
         }
 
         if (playerCount == 2) {
@@ -47,16 +47,15 @@ public class LayoutSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (playerCount == 2) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), TwoPlayerActivity.class );
+                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 2);
+                    gameSelectIntent.putExtra("playerCount", playerCount);
                     startActivity(gameSelectIntent);
                 } else if (playerCount == 4) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), FourPlayerActivity.class );
+                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 1);
+                    gameSelectIntent.putExtra("playerCount", playerCount);
                     startActivity(gameSelectIntent);
-                } else {
-                    Intent mainIntent = new Intent(v.getContext(), MainActivity.class );
-                    startActivity(mainIntent);
                 }
             }
         });
@@ -65,16 +64,15 @@ public class LayoutSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (playerCount == 2) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), TwoPlayerActivity.class );
+                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 1);
+                    gameSelectIntent.putExtra("playerCount", playerCount);
                     startActivity(gameSelectIntent);
                 } else if (playerCount == 4) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), FourPlayerActivity.class );
+                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 2);
+                    gameSelectIntent.putExtra("playerCount", playerCount);
                     startActivity(gameSelectIntent);
-                } else {
-                    Intent mainIntent = new Intent(v.getContext(), MainActivity.class );
-                    startActivity(mainIntent);
                 }
             }
 
