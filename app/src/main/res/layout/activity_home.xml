@@ -29,7 +29,7 @@
         app:layout_constraintGuide_percent=".590" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/btmGuideline"
+        android:id="@+id/topContGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -44,7 +44,7 @@
         android:background="?attr/selectableItemBackground"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Begin"
-        android:textColor="#FF80AB"
+        android:textColor="@color/white"
         android:textColorHint="#2196F3"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,6 @@
         android:id="@+id/titleLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/container1_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/ctrGuidelineTop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +71,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:text="@string/app_name"
             android:textAlignment="center"
-            android:textColor="#3F51B5"
+            android:textColor="@color/white"
             android:textSize="56sp" />
     </LinearLayout>
 
@@ -80,9 +79,8 @@
         android:id="@+id/beginLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/container2_bg"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/btmGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/topContGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/ctrGuidelineBtm">

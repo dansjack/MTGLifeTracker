@@ -11,7 +11,6 @@
         android:id="@+id/lifecountLayout"
         android:layout_height="0dp"
         android:layout_width="0dp"
-        android:background="@drawable/container1_bg"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +24,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:text="CHOOSE LIFECOUNT"
             android:textAlignment="center"
-            android:textColor="#3F51B5"
+            android:textColor="@color/white"
             android:textSize="56sp" />
     </LinearLayout>
 
@@ -35,7 +34,7 @@
         android:layout_height="0dp"
         android:background="@drawable/container2_bg"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/btmGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/topContGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleLayout"
@@ -46,33 +45,23 @@
             android:id="@+id/lifeUpBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="106dp"
             android:background="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
-            android:text="+ 10"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/lifecount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/defaultLife"
             android:textAlignment="center"
-            android:textColor="#333333"
-            android:textSize="72sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/p1Container"
-            app:layout_constraintEnd_toEndOf="@+id/p1Container"
-            app:layout_constraintStart_toStartOf="@+id/p1Container"
-            app:layout_constraintTop_toTopOf="@id/p1Container" />
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/lifeDwnBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="106dp"
             android:background="?attr/selectableItemBackground"
-            android:text="- 10"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
             android:textSize="30sp" />
 
     </LinearLayout>
@@ -82,14 +71,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".020" />
+        app:layout_constraintGuide_percent=".070" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/textGuideline"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/lifecount"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".20" />
+        android:text="@string/defaultLife"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/p1Container"
+        app:layout_constraintStart_toStartOf="@+id/p1Container"
+        app:layout_constraintTop_toTopOf="@id/lifeBtnGuideline" />
 
     <android.support.constraint.Guideline
         android:id="@+id/ctrGuidelineTop"
@@ -97,7 +92,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="4dp"
-        app:layout_constraintGuide_percent=".570" />
+        app:layout_constraintGuide_percent=".460" />
 
     <android.support.constraint.Guideline
         android:id="@+id/ctrGuidelineBtm"
@@ -105,7 +100,59 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="432dp"
-        app:layout_constraintGuide_percent=".590" />
+        app:layout_constraintGuide_percent=".480" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lifeBtnGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".555" />
+
+    <LinearLayout
+        android:id="@+id/contLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/btmGuideline"
+        app:layout_constraintTop_toBottomOf="@id/lifeIntLayout">
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topContGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".78" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/btmContGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Continue"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintTop_toBottomOf="@id/btmContGuideline"
+        app:layout_constraintTop_toTopOf="@id/contBtnGuideline"
+        app:layout_goneMarginEnd="8dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/contBtnGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".845" />
 
     <android.support.constraint.Guideline
         android:id="@+id/btmGuideline"
