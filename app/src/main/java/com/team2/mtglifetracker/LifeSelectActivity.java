@@ -1,5 +1,6 @@
 package com.team2.mtglifetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -31,7 +32,9 @@ public class LifeSelectActivity extends AppCompatActivity {
 
         Button lifeUpBtn = findViewById(R.id.lifeUpBtn);
         Button lifeDwnBtn = findViewById(R.id.lifeDwnBtn);
+        Button contBtn = findViewById(R.id.continueBtn);
         final TextView lifecount = findViewById(R.id.lifecount);
+
 
         lifeUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,15 @@ public class LifeSelectActivity extends AppCompatActivity {
                 lifecount.setText(String.valueOf(life - 10));
             }
 
+        });
+
+        contBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playerSelectIntent = new Intent(v.getContext(), PlayerSelectActivity.class );
+                playerSelectIntent.putExtra("startingLife", Integer.parseInt(lifecount.getText().toString()));
+                startActivity(playerSelectIntent);
+            }
         });
 
     }
