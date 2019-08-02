@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class LayoutSelectActivity extends AppCompatActivity {
     int playerCount = 0;
+    int startingLife = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class LayoutSelectActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             playerCount = extras.getInt("playerCount");
+            startingLife = extras.getInt("startingLife");
         }
 
         if (playerCount == 2) {
@@ -50,11 +52,13 @@ public class LayoutSelectActivity extends AppCompatActivity {
                     Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 2);
                     gameSelectIntent.putExtra("playerCount", playerCount);
+                    gameSelectIntent.putExtra("startingLife", startingLife);
                     startActivity(gameSelectIntent);
                 } else if (playerCount == 4) {
                     Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 1);
                     gameSelectIntent.putExtra("playerCount", playerCount);
+                    gameSelectIntent.putExtra("startingLife", startingLife);
                     startActivity(gameSelectIntent);
                 }
             }
@@ -67,11 +71,13 @@ public class LayoutSelectActivity extends AppCompatActivity {
                     Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 1);
                     gameSelectIntent.putExtra("playerCount", playerCount);
+                    gameSelectIntent.putExtra("startingLife", startingLife);
                     startActivity(gameSelectIntent);
                 } else if (playerCount == 4) {
                     Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
                     gameSelectIntent.putExtra("layoutType", 2);
                     gameSelectIntent.putExtra("playerCount", playerCount);
+                    gameSelectIntent.putExtra("startingLife", startingLife);
                     startActivity(gameSelectIntent);
                 }
             }

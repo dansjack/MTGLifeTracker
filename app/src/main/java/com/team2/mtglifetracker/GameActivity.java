@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class GameActivity extends AppCompatActivity {
     int layoutType = 0;
     int playerCount = 0;
+    int startingLife = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class GameActivity extends AppCompatActivity {
         if (extras != null) {
             layoutType = extras.getInt("layoutType");
             playerCount = extras.getInt("playerCount");
+            startingLife = extras.getInt("startingLife");
         }
 
         // determine content view
@@ -63,6 +65,7 @@ public class GameActivity extends AppCompatActivity {
                 Button p4DownBtn = findViewById(R.id.p4DownBtn);
 
                 final TextView p4CurrScore = findViewById(R.id.p4Score);
+                p4CurrScore.setText(String.valueOf(startingLife));
 
 
                 p4UpBtn.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +89,7 @@ public class GameActivity extends AppCompatActivity {
                 Button p3DownBtn = findViewById(R.id.p3DownBtn);
 
                 final TextView p3CurrScore = findViewById(R.id.p3Score);
+                p3CurrScore.setText(String.valueOf(startingLife));
 
                 p3UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -111,6 +115,8 @@ public class GameActivity extends AppCompatActivity {
 
                 final TextView p1CurrScore = findViewById(R.id.p1Score);
                 final TextView p2CurrScore = findViewById(R.id.p2Score);
+                p1CurrScore.setText(String.valueOf(startingLife));
+                p2CurrScore.setText(String.valueOf(startingLife));
 
                 p1UpBtn.setOnClickListener(new View.OnClickListener() {
 
