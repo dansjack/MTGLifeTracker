@@ -1,5 +1,6 @@
 package com.team2.mtglifetracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -155,10 +156,17 @@ public class GameActivity extends AppCompatActivity {
                 optBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(GameActivity.this, "Options Button clicked", Toast.LENGTH_SHORT).show();
+                        openOptions();
                     }
+
                 });
+
                 break;
         }
+    }
+
+    private void openOptions() {
+        Intent intent = new Intent(this, options.class);
+        startActivity(intent);
     }
 }
