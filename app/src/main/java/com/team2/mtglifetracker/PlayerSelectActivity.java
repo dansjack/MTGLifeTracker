@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 
 public class PlayerSelectActivity extends AppCompatActivity {
+    int startingLife = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,12 @@ public class PlayerSelectActivity extends AppCompatActivity {
         // enable full screen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // get starting life
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            startingLife = extras.getInt("startingLife");
+        }
 
         setContentView(R.layout.activity_player_select);
 
@@ -41,6 +49,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
                 // https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
                 Intent layoutSelectIntent = new Intent(v.getContext(), LayoutSelectActivity.class );
                 layoutSelectIntent.putExtra("playerCount", 2);
+                layoutSelectIntent.putExtra("startingLife", startingLife);
                 startActivity(layoutSelectIntent);
 
             }
@@ -54,6 +63,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
                 // https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
                 Intent layoutSelectIntent = new Intent(v.getContext(), GameActivity.class );
                 layoutSelectIntent.putExtra("playerCount", 3);
+                layoutSelectIntent.putExtra("startingLife", startingLife);
                 startActivity(layoutSelectIntent);
 
             }
@@ -65,6 +75,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
                 // on click, send user to two player layout selection screen and store choice
                 Intent layoutSelectIntent = new Intent(v.getContext(), LayoutSelectActivity.class );
                 layoutSelectIntent.putExtra("playerCount", 4);
+                layoutSelectIntent.putExtra("startingLife", startingLife);
                 startActivity(layoutSelectIntent);
 
             }
