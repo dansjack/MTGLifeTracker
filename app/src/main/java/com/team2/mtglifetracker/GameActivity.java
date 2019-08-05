@@ -10,12 +10,14 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.team2.mtglifetracker.lib.Globals;
 
 public class GameActivity extends AppCompatActivity {
     int layoutType = 0;
     int playerCount = 0;
     int startingLife = 0;
+    Globals glog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class GameActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_three_player);
         }
 
+        glog = new Globals(getApplicationContext());
         // Stores buttons, player scores, and sets onClick listeners according to player count
         switch (playerCount) {
             case 4:
@@ -72,8 +75,7 @@ public class GameActivity extends AppCompatActivity {
                 p4UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p4CurrScore.getText().toString());
-                        p4CurrScore.setText(String.valueOf(score + 1));
+                        glog.changeScore(p4CurrScore, true);
                     }
                 });
 
@@ -81,8 +83,8 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p4CurrScore.getText().toString());
-                        p4CurrScore.setText(String.valueOf(score - 1));
+                        glog.changeScore(p4CurrScore, false);
+
                     }
                 });
             case 3:
@@ -95,8 +97,7 @@ public class GameActivity extends AppCompatActivity {
                 p3UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p3CurrScore.getText().toString());
-                        p3CurrScore.setText(String.valueOf(score + 1));
+                        glog.changeScore(p3CurrScore, true);
                     }
                 });
 
@@ -104,8 +105,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p3CurrScore.getText().toString());
-                        p3CurrScore.setText(String.valueOf(score - 1));
+                        glog.changeScore(p3CurrScore, false);
                     }
                 });
             case 2:
@@ -124,16 +124,14 @@ public class GameActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         // do something when up button clicked
-                        int score = Integer.parseInt(p1CurrScore.getText().toString());
-                        p1CurrScore.setText(String.valueOf(score + 1));
+                        glog.changeScore(p1CurrScore, true);
                     }
                 });
 
                 p1DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p1CurrScore.getText().toString());
-                        p1CurrScore.setText(String.valueOf(score - 1));
+                        glog.changeScore(p1CurrScore, false);
                     }
                 });
 
@@ -142,16 +140,14 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p2CurrScore.getText().toString());
-                        p2CurrScore.setText(String.valueOf(score + 1));
+                        glog.changeScore(p2CurrScore, true);
                     }
                 });
 
                 p2DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p2CurrScore.getText().toString());
-                        p2CurrScore.setText(String.valueOf(score - 1));
+                        glog.changeScore(p2CurrScore, false);
                     }
                 });
 
@@ -166,7 +162,6 @@ public class GameActivity extends AppCompatActivity {
                     }
 
                 });
-
                 break;
         }
     }
