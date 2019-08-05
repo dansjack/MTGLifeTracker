@@ -197,20 +197,6 @@
         app:layout_constraintTop_toTopOf="@id/p1Container" />
 
     <TextView
-        android:id="@+id/p1Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p1Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/p1Score"
-        app:layout_constraintEnd_toEndOf="@id/p1Container"
-        app:layout_constraintStart_toStartOf="@id/p1Container"
-        app:layout_constraintTop_toBottomOf="@id/playerOptBg" />
-
-    <TextView
         android:id="@+id/p2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -223,21 +209,6 @@
         app:layout_constraintBottom_toBottomOf="@id/p2Container"
         app:layout_constraintEnd_toEndOf="@id/p2Container"
         app:layout_constraintStart_toStartOf="@id/p2Container"
-        app:layout_constraintTop_toTopOf="@id/p2Container" />
-
-    <TextView
-        android:id="@+id/p2Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="90"
-        android:text="@string/p2Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/p2Container"
-        app:layout_constraintEnd_toEndOf="@id/p2Container"
-        app:layout_constraintStart_toEndOf="@id/p2Score"
         app:layout_constraintTop_toTopOf="@id/p2Container" />
 
     <TextView
@@ -256,21 +227,6 @@
         app:layout_constraintTop_toTopOf="@id/p3Container" />
 
     <TextView
-        android:id="@+id/p3Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-90"
-        android:text="@string/p3Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/p3Container"
-        app:layout_constraintEnd_toStartOf="@id/p3Score"
-        app:layout_constraintStart_toStartOf="@id/p3Container"
-        app:layout_constraintTop_toTopOf="@id/p3Container" />
-
-    <TextView
         android:id="@+id/p4Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -284,21 +240,6 @@
         app:layout_constraintEnd_toEndOf="@id/p4Container"
         app:layout_constraintStart_toStartOf="@id/p4Container"
         app:layout_constraintTop_toTopOf="@id/p4Container" />
-
-    <TextView
-        android:id="@+id/p4Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="180"
-        android:text="@string/p4Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/p4Container"
-        app:layout_constraintEnd_toEndOf="@id/p4Container"
-        app:layout_constraintStart_toStartOf="@id/p4Container"
-        app:layout_constraintTop_toBottomOf="@id/p4Score" />
 
     <android.support.constraint.Guideline
         android:id="@+id/oTopG"
