@@ -1,6 +1,5 @@
 package com.team2.mtglifetracker;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +8,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.team2.mtglifetracker.lib.Globals;
+
 public class LayoutSelectActivity extends AppCompatActivity {
     int playerCount = 0;
     int startingLife = 0;
+    Globals glog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,41 +47,19 @@ public class LayoutSelectActivity extends AppCompatActivity {
         Button layout1Btn = findViewById(R.id.l1Btn);
         Button layout2Btn = findViewById(R.id.l2Btn);
 
+
+        glog = new Globals(getApplicationContext());
         layout1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (playerCount == 2) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
-                    gameSelectIntent.putExtra("layoutType", 2);
-                    gameSelectIntent.putExtra("playerCount", playerCount);
-                    gameSelectIntent.putExtra("startingLife", startingLife);
-                    startActivity(gameSelectIntent);
-                } else if (playerCount == 4) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
-                    gameSelectIntent.putExtra("layoutType", 1);
-                    gameSelectIntent.putExtra("playerCount", playerCount);
-                    gameSelectIntent.putExtra("startingLife", startingLife);
-                    startActivity(gameSelectIntent);
-                }
+                startActivity(glog.selectIntent(v, GameActivity.class, 1, playerCount, startingLife));
             }
         });
 
         layout2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (playerCount == 2) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
-                    gameSelectIntent.putExtra("layoutType", 1);
-                    gameSelectIntent.putExtra("playerCount", playerCount);
-                    gameSelectIntent.putExtra("startingLife", startingLife);
-                    startActivity(gameSelectIntent);
-                } else if (playerCount == 4) {
-                    Intent gameSelectIntent = new Intent(v.getContext(), GameActivity.class );
-                    gameSelectIntent.putExtra("layoutType", 2);
-                    gameSelectIntent.putExtra("playerCount", playerCount);
-                    gameSelectIntent.putExtra("startingLife", startingLife);
-                    startActivity(gameSelectIntent);
-                }
+                startActivity(glog.selectIntent(v, GameActivity.class, 2, playerCount, startingLife));
             }
 
         });

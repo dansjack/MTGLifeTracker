@@ -112,35 +112,6 @@
         app:layout_constraintStart_toStartOf="@+id/p2Container"
         app:layout_constraintTop_toTopOf="@+id/p2Container" />
 
-    <TextView
-        android:id="@+id/p1Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p1Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/p1Score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/playerOptBtn" />
-
-    <TextView
-        android:id="@+id/p2Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="180"
-        android:text="@string/p2Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/playerOptBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/p2Score" />
-
     <android.support.constraint.Guideline
         android:id="@+id/p2BottomG"
         android:layout_width="wrap_content"
@@ -160,10 +131,10 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:contentDescription="@string/player_opt_btn_bg_desc"
-        app:layout_constraintBottom_toTopOf="@id/p1Name"
+        app:layout_constraintBottom_toTopOf="@id/p1Score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/p2Name"
+        app:layout_constraintTop_toBottomOf="@id/p2Score"
         app:srcCompat="@drawable/ic_lens_black_24dp" />
 
     <ImageButton
