@@ -11,14 +11,12 @@ import com.team2.mtglifetracker.lib.Globals;
 public class LayoutSelectActivity extends AppCompatActivity {
     int playerCount = 0;
     int startingLife = 0;
-    Globals glog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        glog = new Globals(getApplicationContext());
-        glog.clearScreen(this);
+        Globals.clearScreen(this);
 
         // determine content view
         Bundle extras = getIntent().getExtras();
@@ -41,14 +39,14 @@ public class LayoutSelectActivity extends AppCompatActivity {
         layout1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(glog.selectIntent(v, GameActivity.class, 1, playerCount, startingLife));
+                startActivity(Globals.selectIntent(v, GameActivity.class, 1, playerCount, startingLife));
             }
         });
 
         layout2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(glog.selectIntent(v, GameActivity.class, 2, playerCount, startingLife));
+                startActivity(Globals.selectIntent(v, GameActivity.class, 2, playerCount, startingLife));
             }
 
         });

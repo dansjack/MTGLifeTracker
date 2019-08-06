@@ -10,15 +10,13 @@ import com.team2.mtglifetracker.lib.Globals;
 
 public class PlayerSelectActivity extends AppCompatActivity {
     int startingLife = 0;
-    Globals glog;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        glog = new Globals(getApplicationContext());
-        glog.clearScreen(this);
+        Globals.clearScreen(this);
 
         // get starting life
         Bundle extras = getIntent().getExtras();
@@ -38,7 +36,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // on click, send user to two player layout selection screen and store choice
                 // v.getContext() tip: https://stackoverflow.com/questions/20241857/android-intent-cannot-resolve-constructor
-                startActivity(glog.selectIntent(v, LayoutSelectActivity.class, 2, startingLife));
+                startActivity(Globals.selectIntent(v, LayoutSelectActivity.class, 2, startingLife));
             }
         });
 
@@ -46,7 +44,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // on click, send user to three player layout selection screen and store choice
-                startActivity(glog.selectIntent(v, GameActivity.class, 3, startingLife));
+                startActivity(Globals.selectIntent(v, GameActivity.class, 3, startingLife));
             }
         });
 
@@ -54,7 +52,7 @@ public class PlayerSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // on click, send user to four player layout selection screen and store choice
-                startActivity(glog.selectIntent(v, LayoutSelectActivity.class, 4, startingLife));
+                startActivity(Globals.selectIntent(v, LayoutSelectActivity.class, 4, startingLife));
             }
         });
     }

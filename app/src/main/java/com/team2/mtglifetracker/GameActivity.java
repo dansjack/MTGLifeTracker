@@ -15,15 +15,13 @@ public class GameActivity extends AppCompatActivity {
     int layoutType = 0;
     int playerCount = 0;
     int startingLife = 0;
-    Globals glog;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        glog = new Globals(getApplicationContext());
-        glog.clearScreen(this);
+        Globals.clearScreen(this);
 
         // get data from previous activities
         Bundle extras = getIntent().getExtras();
@@ -66,7 +64,7 @@ public class GameActivity extends AppCompatActivity {
                 p4UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p4CurrScore, 1,true);
+                        Globals.incrementer(p4CurrScore, 1,true);
                     }
                 });
 
@@ -74,7 +72,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p4CurrScore, 1,false);
+                        Globals.incrementer(p4CurrScore, 1,false);
 
                     }
                 });
@@ -88,7 +86,7 @@ public class GameActivity extends AppCompatActivity {
                 p3UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p3CurrScore, 1, true);
+                        Globals.incrementer(p3CurrScore, 1, true);
                     }
                 });
 
@@ -96,7 +94,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p3CurrScore, 1, false);
+                        Globals.incrementer(p3CurrScore, 1, false);
                     }
                 });
             case 2:
@@ -115,14 +113,14 @@ public class GameActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         // do something when up button clicked
-                        glog.incrementer(p1CurrScore, 1, true);
+                        Globals.incrementer(p1CurrScore, 1, true);
                     }
                 });
 
                 p1DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p1CurrScore, 1, false);
+                        Globals.incrementer(p1CurrScore, 1, false);
                     }
                 });
 
@@ -131,14 +129,14 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p2CurrScore, 1, true);
+                        Globals.incrementer(p2CurrScore, 1, true);
                     }
                 });
 
                 p2DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.incrementer(p2CurrScore, 1, false);
+                        Globals.incrementer(p2CurrScore, 1, false);
                     }
                 });
 

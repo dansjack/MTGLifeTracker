@@ -8,16 +8,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class Globals {
-    private Context mContext;
+public final class Globals {
 
-    public Globals(Context context) {
-        this.mContext = context;
+    private Globals(Context context) {
+        Context mContext = context;
     }
 
-    public void incrementer(TextView toIncrement, int inc, Boolean increment) {
+    public static void incrementer(@org.jetbrains.annotations.NotNull TextView toIncrement, int inc, @NotNull Boolean increment) {
         // increment/decrement an int by an int, inc/dec determined by boolean
         int value = Integer.parseInt(toIncrement.getText().toString());
         if (increment) {
@@ -27,7 +28,7 @@ public class Globals {
         }
     }
 
-    public Intent selectIntent(View v, Class nextActivity, int layoutType, int playerCount, int startingLife) {
+    public static Intent selectIntent(@NotNull View v, Class nextActivity, int layoutType, int playerCount, int startingLife) {
         // instantiates new intent to send user (and data) to the next activity (3 extras)
         Intent intent = new Intent(v.getContext(), nextActivity );
 
@@ -38,7 +39,7 @@ public class Globals {
         return intent;
     }
 
-    public Intent selectIntent(View v, Class nextActivity, int playerCount, int startingLife) {
+    public static Intent selectIntent(@NotNull View v, Class nextActivity, int playerCount, int startingLife) {
         // instantiates new intent to send user (and data) to the next activity (2 extras)
         Intent intent = new Intent(v.getContext(), nextActivity );
 
@@ -48,7 +49,7 @@ public class Globals {
         return intent;
     }
 
-    public Intent selectIntent(View v, Class nextActivity, int startingLife) {
+    public static Intent selectIntent(@NotNull View v, Class nextActivity, int startingLife) {
         // instantiates new intent to send user (and data) to the next activity (1 extra)
         Intent intent = new Intent(v.getContext(), nextActivity );
 
@@ -57,7 +58,7 @@ public class Globals {
         return intent;
     }
 
-    public void clearScreen(AppCompatActivity context) {
+    public static void clearScreen(@NotNull AppCompatActivity context) {
         // makes three changes to the default Activity layout
 
         // this removes the title bar from the activity
