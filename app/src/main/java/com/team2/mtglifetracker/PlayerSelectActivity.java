@@ -1,12 +1,9 @@
 package com.team2.mtglifetracker;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 
 import com.team2.mtglifetracker.lib.Globals;
@@ -20,15 +17,8 @@ public class PlayerSelectActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        glog = new Globals(getApplicationContext());
+        glog.clearScreen(this);
 
         // get starting life
         Bundle extras = getIntent().getExtras();
@@ -43,7 +33,6 @@ public class PlayerSelectActivity extends AppCompatActivity {
         ImageButton select3PBtn = findViewById(R.id.threePlayerBtn);
         ImageButton select4PBtn = findViewById(R.id.fourPlayerBtn);
 
-        glog = new Globals(getApplicationContext());
         select2PBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

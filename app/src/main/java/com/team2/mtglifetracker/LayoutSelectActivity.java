@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import com.team2.mtglifetracker.lib.Globals;
@@ -19,16 +17,8 @@ public class LayoutSelectActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        glog = new Globals(getApplicationContext());
+        glog.clearScreen(this);
 
         // determine content view
         Bundle extras = getIntent().getExtras();
@@ -48,7 +38,6 @@ public class LayoutSelectActivity extends AppCompatActivity {
         Button layout2Btn = findViewById(R.id.l2Btn);
 
 
-        glog = new Globals(getApplicationContext());
         layout1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

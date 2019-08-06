@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,19 +17,13 @@ public class GameActivity extends AppCompatActivity {
     int startingLife = 0;
     Globals glog;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        glog = new Globals(getApplicationContext());
+        glog.clearScreen(this);
 
         // get data from previous activities
         Bundle extras = getIntent().getExtras();
@@ -61,7 +53,6 @@ public class GameActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_three_player);
         }
 
-        glog = new Globals(getApplicationContext());
         // Stores buttons, player scores, and sets onClick listeners according to player count
         switch (playerCount) {
             case 4:
@@ -75,7 +66,7 @@ public class GameActivity extends AppCompatActivity {
                 p4UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p4CurrScore, true);
+                        glog.incrementer(p4CurrScore, 1,true);
                     }
                 });
 
@@ -83,7 +74,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p4CurrScore, false);
+                        glog.incrementer(p4CurrScore, 1,false);
 
                     }
                 });
@@ -97,7 +88,7 @@ public class GameActivity extends AppCompatActivity {
                 p3UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p3CurrScore, true);
+                        glog.incrementer(p3CurrScore, 1, true);
                     }
                 });
 
@@ -105,7 +96,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p3CurrScore, false);
+                        glog.incrementer(p3CurrScore, 1, false);
                     }
                 });
             case 2:
@@ -124,14 +115,14 @@ public class GameActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         // do something when up button clicked
-                        glog.changeScore(p1CurrScore, true);
+                        glog.incrementer(p1CurrScore, 1, true);
                     }
                 });
 
                 p1DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p1CurrScore, false);
+                        glog.incrementer(p1CurrScore, 1, false);
                     }
                 });
 
@@ -140,14 +131,14 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p2CurrScore, true);
+                        glog.incrementer(p2CurrScore, 1, true);
                     }
                 });
 
                 p2DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        glog.changeScore(p2CurrScore, false);
+                        glog.incrementer(p2CurrScore, 1, false);
                     }
                 });
 
