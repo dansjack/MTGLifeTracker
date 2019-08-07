@@ -5,31 +5,23 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.team2.mtglifetracker.lib.Globals;
 
 public class GameActivity extends AppCompatActivity {
     int layoutType = 0;
     int playerCount = 0;
     int startingLife = 0;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Globals.clearScreen(this);
 
         // get data from previous activities
         Bundle extras = getIntent().getExtras();
@@ -72,8 +64,7 @@ public class GameActivity extends AppCompatActivity {
                 p4UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p4CurrScore.getText().toString());
-                        p4CurrScore.setText(String.valueOf(score + 1));
+                        Globals.incrementer(p4CurrScore, 1,true);
                     }
                 });
 
@@ -81,8 +72,8 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p4CurrScore.getText().toString());
-                        p4CurrScore.setText(String.valueOf(score - 1));
+                        Globals.incrementer(p4CurrScore, 1,false);
+
                     }
                 });
             case 3:
@@ -95,8 +86,7 @@ public class GameActivity extends AppCompatActivity {
                 p3UpBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p3CurrScore.getText().toString());
-                        p3CurrScore.setText(String.valueOf(score + 1));
+                        Globals.incrementer(p3CurrScore, 1, true);
                     }
                 });
 
@@ -104,8 +94,7 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p3CurrScore.getText().toString());
-                        p3CurrScore.setText(String.valueOf(score - 1));
+                        Globals.incrementer(p3CurrScore, 1, false);
                     }
                 });
             case 2:
@@ -124,16 +113,14 @@ public class GameActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         // do something when up button clicked
-                        int score = Integer.parseInt(p1CurrScore.getText().toString());
-                        p1CurrScore.setText(String.valueOf(score + 1));
+                        Globals.incrementer(p1CurrScore, 1, true);
                     }
                 });
 
                 p1DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p1CurrScore.getText().toString());
-                        p1CurrScore.setText(String.valueOf(score - 1));
+                        Globals.incrementer(p1CurrScore, 1, false);
                     }
                 });
 
@@ -142,16 +129,14 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p2CurrScore.getText().toString());
-                        p2CurrScore.setText(String.valueOf(score + 1));
+                        Globals.incrementer(p2CurrScore, 1, true);
                     }
                 });
 
                 p2DownBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int score = Integer.parseInt(p2CurrScore.getText().toString());
-                        p2CurrScore.setText(String.valueOf(score - 1));
+                        Globals.incrementer(p2CurrScore, 1, false);
                     }
                 });
 
@@ -166,7 +151,6 @@ public class GameActivity extends AppCompatActivity {
                     }
 
                 });
-
                 break;
         }
     }

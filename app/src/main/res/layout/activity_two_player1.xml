@@ -12,35 +12,36 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:weightSum="2"
         android:background="@drawable/container1_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/p2BottomG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1TopG">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/p1DownBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/p1UpBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/p1DownBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 
@@ -49,19 +50,19 @@
         style="?android:attr/buttonBarStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:weightSum="2"
         android:background="@drawable/container2_bg"
-        app:layout_constraintBottom_toTopOf="@+id/p2BottomG"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@id/p1TopG">
 
         <Button
             android:id="@+id/p2DownBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:rotation="180"
@@ -73,8 +74,8 @@
         <Button
             android:id="@+id/p2UpBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:textAlignment="viewEnd"
@@ -87,6 +88,7 @@
         android:id="@+id/p1Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:rotation="90"
         android:text="@string/p1Score"
         android:textAlignment="center"
         android:textColor="#333333"
@@ -101,7 +103,7 @@
         android:id="@+id/p2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rotation="180"
+        android:rotation="90"
         android:text="@string/p2Score"
         android:textAlignment="center"
         android:textColor="#333333"
@@ -111,35 +113,6 @@
         app:layout_constraintEnd_toEndOf="@+id/p2Container"
         app:layout_constraintStart_toStartOf="@+id/p2Container"
         app:layout_constraintTop_toTopOf="@+id/p2Container" />
-
-    <TextView
-        android:id="@+id/p1Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p1Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/p1Score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/playerOptBtn" />
-
-    <TextView
-        android:id="@+id/p2Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="180"
-        android:text="@string/p2Name"
-        android:textAlignment="center"
-        android:textColor="#333333"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/playerOptBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/p2Score" />
 
     <android.support.constraint.Guideline
         android:id="@+id/p2BottomG"
@@ -160,16 +133,16 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:contentDescription="@string/player_opt_btn_bg_desc"
-        app:layout_constraintBottom_toTopOf="@id/p1Name"
+        app:layout_constraintBottom_toTopOf="@id/p2Score"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/p2Name"
+        app:layout_constraintTop_toBottomOf="@id/p1Score"
         app:srcCompat="@drawable/ic_lens_black_24dp" />
 
     <ImageButton
         android:id="@+id/playerOptBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
