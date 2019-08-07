@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="CHOOSE LIFECOUNT"
+            android:text="@string/choose_lifecount_str"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="56sp" />
@@ -37,7 +36,6 @@
         app:layout_constraintBottom_toBottomOf="@id/topContGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLayout"
         app:layout_constraintTop_toTopOf="@id/ctrGuidelineBtm">
 
 
@@ -82,9 +80,10 @@
         android:textColor="@color/white"
         android:textSize="72sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/p1Container"
-        app:layout_constraintStart_toStartOf="@+id/p1Container"
-        app:layout_constraintTop_toTopOf="@id/lifeBtnGuideline" />
+        app:layout_constraintBottom_toBottomOf="@id/lifeIntLayout"
+        app:layout_constraintEnd_toEndOf="@id/lifeIntLayout"
+        app:layout_constraintStart_toStartOf="@id/lifeIntLayout"
+        app:layout_constraintTop_toTopOf="@id/lifeIntLayout" />
 
     <android.support.constraint.Guideline
         android:id="@+id/ctrGuidelineTop"
@@ -101,13 +100,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="432dp"
         app:layout_constraintGuide_percent=".480" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/lifeBtnGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".555" />
 
     <LinearLayout
         android:id="@+id/contLayout"
@@ -139,7 +131,7 @@
         android:layout_height="wrap_content"
         android:background="@color/transparent"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Continue"
+        android:text="@string/cont_str"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="48sp"

@@ -11,24 +11,17 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.team2.mtglifetracker.lib.Globals;
+
 public class LifeSelectActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Globals.clearScreen(this);
 
         setContentView(R.layout.activity_life_select);
-
 
         Button lifeUpBtn = findViewById(R.id.lifeUpBtn);
         Button lifeDwnBtn = findViewById(R.id.lifeDwnBtn);
@@ -39,8 +32,7 @@ public class LifeSelectActivity extends AppCompatActivity {
         lifeUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int life = Integer.parseInt(lifecount.getText().toString());
-                lifecount.setText(String.valueOf(life + 10));
+                Globals.incrementer(lifecount, 10, true);
             }
 
         });
@@ -48,8 +40,7 @@ public class LifeSelectActivity extends AppCompatActivity {
         lifeDwnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int life = Integer.parseInt(lifecount.getText().toString());
-                lifecount.setText(String.valueOf(life - 10));
+                Globals.incrementer(lifecount, 10, false);
             }
 
         });
@@ -57,9 +48,8 @@ public class LifeSelectActivity extends AppCompatActivity {
         contBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent playerSelectIntent = new Intent(v.getContext(), PlayerSelectActivity.class );
-                playerSelectIntent.putExtra("startingLife", Integer.parseInt(lifecount.getText().toString()));
-                startActivity(playerSelectIntent);
+                startActivity(Globals.selectIntent(v, PlayerSelectActivity.class,
+                        Integer.parseInt(lifecount.getText().toString())));
             }
         });
 
