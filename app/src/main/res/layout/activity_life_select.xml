@@ -32,7 +32,7 @@
         android:id="@+id/lifeIntLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/container2_bg"
+        android:background="@drawable/container_life_select"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/topContGuideline"
         app:layout_constraintEnd_toEndOf="parent"
