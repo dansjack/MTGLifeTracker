@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="117dp"
         android:layout_marginBottom="102dp"
-        android:text="Close" />
+        android:text="@string/close_str" />
 
     <ImageButton
         android:id="@+id/homeBtn"
@@ -24,6 +24,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="259dp"
         android:layout_marginBottom="544dp"
-        app:srcCompat="@drawable/ic_home_1" />
+        app:srcCompat="@drawable/ic_home_1"
+        android:contentDescription="@string/home_button_str" />
 
 </RelativeLayout>

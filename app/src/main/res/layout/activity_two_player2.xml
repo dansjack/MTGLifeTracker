@@ -147,7 +147,7 @@
         android:layout_marginBottom="12dp"
         android:adjustViewBounds="true"
         android:background="#0000"
-        android:contentDescription="@string/player_opt_btn_desc"
+        android:contentDescription="@string/options_button_desc"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="@id/playerOptBg"
         app:layout_constraintEnd_toEndOf="@id/playerOptBg"
