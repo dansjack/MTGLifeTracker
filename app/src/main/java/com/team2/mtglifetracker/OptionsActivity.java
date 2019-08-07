@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class options extends AppCompatActivity {
+public class OptionsActivity extends AppCompatActivity {
     private Button button;
 
     @Override
