@@ -19,7 +19,7 @@
         <activity android:name=".PlayerSelectActivity" android:screenOrientation="portrait" />
         <activity android:name=".LayoutSelectActivity" android:screenOrientation="portrait" />
         <activity android:name=".GameActivity" android:screenOrientation="portrait" />
-        <activity android:name=".options" android:screenOrientation="portrait" />
+        <activity android:name=".OptionsActivity" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -143,7 +143,7 @@ public class GameActivity extends AppCompatActivity {
                 // get reset button
                 ImageButton optBtn = findViewById(R.id.playerOptBtn);
 
-                // set up click listeners for the options button:
+                // set up click listeners for the OptionsActivity button:
                 optBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -156,7 +156,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void openOptions() {
-        Intent intent = new Intent(this, options.class);
+        Intent intent = new Intent(this, OptionsActivity.class);
         startActivity(intent);
     }
 }

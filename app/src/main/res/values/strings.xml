@@ -10,8 +10,19 @@
     <string name="p4Name">Player 4</string>
     <string name="resetBtn">Resets scores of game</string>
     <string name="player_opt_btn_bg_desc">Background for player options button</string>
-    <string name="player_opt_btn_desc">Button for player options</string>
     <string name="set_players">Set Players</string>
     <string name="choose_layout">Choose Layout</string>
     <string name="defaultLife">20</string>
+    <string name="cont_str">Continue</string>
+    <string name="choose_lifecount_str">CHOOSE LIFECOUNT</string>
+    <string name="options_button_desc">Options Button</string>
+    <string name="begin_str">Begin</string>
+    <string name="layout_2_str">Layout 2</string>
+    <string name="layout_1_str">Layout 1</string>
+    <string name="_2_player_button_str">2 player button</string>
+    <string name="_4_player_button_str">4 player button</string>
+    <string name="_3_player_button_str">3 player button</string>
+    <string name="close_str">Close</string>
+    <string name="home_button_str">Home button</string>
+    <string name="back_str">Back</string>
 </resources>

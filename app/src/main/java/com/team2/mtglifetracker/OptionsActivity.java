@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class options extends AppCompatActivity {
+public class OptionsActivity extends AppCompatActivity {
     private Button button;
 
     @Override
@@ -41,7 +41,7 @@ public class options extends AppCompatActivity {
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPlayerSelect();
+                openHome();
             }
 
 
@@ -50,6 +50,11 @@ public class options extends AppCompatActivity {
 
     private void openPlayerSelect() {
         Intent intent = new Intent(this, PlayerSelectActivity.class);
+        startActivity(intent);
+    }
+
+    private void openHome() {
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }

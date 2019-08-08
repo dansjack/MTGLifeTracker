@@ -11,21 +11,15 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.team2.mtglifetracker.lib.Globals;
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Globals.clearScreen(this);
 
         setContentView(R.layout.activity_home);
 
@@ -37,11 +31,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Initialize Intent (intents are how we signal to Android we want to change activities)
-                Intent selectLifeIntent = new Intent(v.getContext(), LifeSelectActivity.class );
-
-                startActivity(selectLifeIntent);
-
-
+                startActivity(new Intent(v.getContext(), LifeSelectActivity.class ));
             }
 
         });

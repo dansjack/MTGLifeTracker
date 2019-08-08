@@ -257,7 +257,8 @@
         app:layout_constraintEnd_toEndOf="@id/playerOptBg"
         app:layout_constraintStart_toStartOf="@id/playerOptBg"
         app:layout_constraintTop_toTopOf="@id/playerOptBg"
-        app:srcCompat="@drawable/ic_gps_fixed_black_24dp" />
+        app:srcCompat="@drawable/ic_gps_fixed_black_24dp"
+        android:contentDescription="@string/options_button_desc" />
 
     <android.support.constraint.Guideline
         android:id="@+id/oTopG"

@@ -32,7 +32,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appTitle"
-        app:srcCompat="@drawable/ic_looks_2_black_24dp" />
+        app:srcCompat="@drawable/ic_looks_2_black_24dp"
+        android:contentDescription="@string/_2_player_button_str" />
 
     <ImageButton
         android:id="@+id/fourPlayerBtn"
@@ -44,7 +45,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appTitle"
-        app:srcCompat="@drawable/ic_looks_4_black_24dp" />
+        app:srcCompat="@drawable/ic_looks_4_black_24dp"
+        android:contentDescription="@string/_4_player_button_str" />
 
     <ImageButton
         android:id="@+id/threePlayerBtn"
@@ -56,5 +58,6 @@
         app:layout_constraintEnd_toStartOf="@+id/fourPlayerBtn"
         app:layout_constraintStart_toEndOf="@+id/twoPlayerBtn"
         app:layout_constraintTop_toBottomOf="@+id/appTitle"
-        app:srcCompat="@drawable/ic_looks_3_black_24dp" />
+        app:srcCompat="@drawable/ic_looks_3_black_24dp"
+        android:contentDescription="@string/_3_player_button_str" />
 </android.support.constraint.ConstraintLayout>
