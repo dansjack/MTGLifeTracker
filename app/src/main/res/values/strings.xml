@@ -25,7 +25,7 @@
     <string name="close_str">Close</string>
     <string name="home_button_str">Home button</string>
     <string name="back_str">Back</string>
-    <string name="select_dice_roll_string">Select N-Sided Die</string>
+    <string name="select_dice_roll_string">Tap to roll</string>
     <string name="d20_title_string">20-Sided Dice Roll:</string>
     <string name="d12_title_string">12-Sided Dice Roll:</string>
     <string name="d10_title_string">10-Sided Dice Roll:</string>
