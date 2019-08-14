@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Begin"
+        android:text="@string/begin_string"
         android:textColor="@color/white"
         android:textColorHint="#2196F3"
         android:textSize="30sp"
@@ -122,7 +122,8 @@
         android:layout_height="290dp"
         app:layout_constraintRight_toRightOf="@id/guidelineAvatarBlueRed"
         app:layout_constraintTop_toTopOf="@id/avatarGuidelineUpper"
-        app:srcCompat="@drawable/ic_blue" />
+        app:srcCompat="@drawable/ic_blue"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgViewAvatarWhite"
@@ -130,7 +131,8 @@
         android:layout_height="290dp"
         app:layout_constraintLeft_toLeftOf="@id/guidelineAvatarWhite"
         app:layout_constraintTop_toTopOf="@id/avatarGuidelineUpper"
-        app:srcCompat="@drawable/ic_white" />
+        app:srcCompat="@drawable/ic_white"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgViewAvatarBlack"
@@ -138,7 +140,8 @@
         android:layout_height="290dp"
         app:layout_constraintRight_toRightOf="@id/guidelineAvatarBlack"
         app:layout_constraintTop_toTopOf="@id/avatarGuidelineLower"
-        app:srcCompat="@drawable/ic_black" />
+        app:srcCompat="@drawable/ic_black"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgViewAvatarGreen"
@@ -146,7 +149,8 @@
         android:layout_height="290dp"
         app:layout_constraintLeft_toLeftOf="@id/guidelineAvatarGreen"
         app:layout_constraintTop_toTopOf="@id/avatarGuidelineLower"
-        app:srcCompat="@drawable/ic_green" />
+        app:srcCompat="@drawable/ic_green"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgViewAvatarRed"
@@ -154,7 +158,8 @@
         android:layout_height="290dp"
         app:layout_constraintLeft_toLeftOf="@id/guidelineAvatarBlueRed"
         app:layout_constraintTop_toTopOf="@id/avatarGuidelineUpper"
-        app:srcCompat="@drawable/ic_red" />
+        app:srcCompat="@drawable/ic_red"
+        tools:ignore="ContentDescription" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
