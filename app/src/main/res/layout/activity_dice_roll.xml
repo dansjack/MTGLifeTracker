@@ -58,7 +58,7 @@
         android:text="@string/select_dice_roll_string"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,8 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="@+id/vGuideL"
         app:layout_constraintTop_toTopOf="@id/hGuideT"
-        app:srcCompat="@drawable/ic_d4" />
+        app:srcCompat="@drawable/ic_d4"
+        android:contentDescription="@string/roll_4_sided_die_string" />
 
     <ImageButton
         android:id="@+id/d6"
@@ -82,7 +83,8 @@
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@id/vGuideR"
         app:layout_constraintTop_toTopOf="@id/hGuideT"
-        app:srcCompat="@drawable/ic_d6" />
+        app:srcCompat="@drawable/ic_d6"
+        android:contentDescription="@string/roll_6_sided_die_string" />
 
     <ImageButton
         android:id="@+id/d8"
@@ -93,7 +95,8 @@
         app:layout_constraintBottom_toTopOf="@id/d12"
         app:layout_constraintStart_toStartOf="@id/vGuideL"
         app:layout_constraintTop_toBottomOf="@id/d4"
-        app:srcCompat="@drawable/ic_d8" />
+        app:srcCompat="@drawable/ic_d8"
+        android:contentDescription="@string/roll_8_sided_die_string" />
 
     <ImageButton
         android:id="@+id/d10"
@@ -104,7 +107,8 @@
         app:layout_constraintBottom_toTopOf="@id/d20"
         app:layout_constraintEnd_toEndOf="@id/vGuideR"
         app:layout_constraintTop_toBottomOf="@id/d6"
-        app:srcCompat="@drawable/ic_d10" />
+        app:srcCompat="@drawable/ic_d10"
+        android:contentDescription="@string/roll_10_sided_die_string" />
 
     <ImageButton
         android:id="@+id/d12"
@@ -114,7 +118,8 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@id/hGuideB"
         app:layout_constraintStart_toStartOf="@id/vGuideL"
-        app:srcCompat="@drawable/ic_d12" />
+        app:srcCompat="@drawable/ic_d12"
+        android:contentDescription="@string/roll_12_sided_die_string" />
 
     <ImageButton
         android:id="@+id/d20"
@@ -124,7 +129,8 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@id/hGuideB"
         app:layout_constraintEnd_toEndOf="@id/vGuideR"
-        app:srcCompat="@drawable/ic_d20" />
+        app:srcCompat="@drawable/ic_d20"
+        android:contentDescription="@string/roll_20_sided_die_string" />
 
     <TextView
         android:id="@+id/d4Result"
