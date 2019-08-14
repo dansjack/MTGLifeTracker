@@ -19,7 +19,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/back_str"
         android:textColor="@color/white"
-        android:textSize="48sp" />
+        android:textSize="30sp" />
 
     <ImageButton
         android:id="@+id/homeBtn"
@@ -37,24 +37,14 @@
 
     <ImageButton
         android:id="@+id/diceBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="180dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="328dp"
-        android:layout_marginEnd="180dp"
         android:background="@color/transparent"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/ic_dice" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="179dp"
-        android:layout_above="@+id/button"
-        android:layout_below="@+id/diceBtn"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        app:srcCompat="@drawable/ic_dice"
+        android:contentDescription="@string/dice_roll_button_string" />
 
 </RelativeLayout>
