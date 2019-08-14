@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:id="@+id/lifecountLayout"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/chooseLifecount"
         android:layout_width="0dp"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/choose_lifecount_str"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/ctrGuidelineTop"
-        app:layout_constraintTop_toTopOf="@id/topGuideline">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:layout_editor_absoluteY="51dp" />
 
-        <TextView
-            android:id="@+id/chooseLifecount"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/choose_lifecount_str"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="48sp" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/lifeIntLayout"
