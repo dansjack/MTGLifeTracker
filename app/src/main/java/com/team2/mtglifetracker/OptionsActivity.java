@@ -17,6 +17,19 @@ public class OptionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //get starting life from GameActivity
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            layoutType = extras.getInt("layoutType");
+            playerCount = extras.getInt("playerCount");
+            startingLife = extras.getInt("startingLife");
+        }
+        //this import currently working dont know how to import layoutType int? string?
+        final int[] startingLife = extras.getIntArray("startingLife");
+
+
+
+
         // this removes the title bar from the activity
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -46,16 +59,30 @@ public class OptionsActivity extends AppCompatActivity {
 
 
         });
+
+        //make the reset button
+        ImageButton resetBtn = findViewById(R.id.resetBtn);
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                openGame(startingLife);
+            }
+        });
+
         }
 
-    private void openPlayerSelect() {
-        Intent intent = new Intent(this, PlayerSelectActivity.class);
+    private void openGame(int[] startingLife) {
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
+
+
     }
 
     private void openHome() {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
+
 }
 

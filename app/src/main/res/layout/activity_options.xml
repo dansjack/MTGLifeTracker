@@ -35,4 +35,16 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/ic_home" />
 
+    <ImageButton
+        android:id="@+id/resetBtn"
+        android:layout_width="51dp"
+        android:layout_height="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/home_button_str"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
 </RelativeLayout>
