@@ -10,25 +10,19 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.team2.mtglifetracker.lib.Globals;
+
 public class OptionsActivity extends AppCompatActivity {
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Globals.clearScreen(this);
 
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_options);
 
-        button = findViewById(R.id.button);
+        final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,24 +31,32 @@ public class OptionsActivity extends AppCompatActivity {
         });
 
         //make the home button
-        ImageButton homeBtn = findViewById(R.id.homeBtn);
+        final ImageButton homeBtn = findViewById(R.id.homeBtn);
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHome();
             }
-
-
         });
-        }
 
-    private void openPlayerSelect() {
-        Intent intent = new Intent(this, PlayerSelectActivity.class);
-        startActivity(intent);
+        final ImageButton diceBtn = findViewById(R.id.diceBtn);
+        diceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDice();
+            }
+        });
+
+
     }
 
     private void openHome() {
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    private void openDice() {
+        Intent intent = new Intent(this, DiceRoll.class);
         startActivity(intent);
     }
 }
