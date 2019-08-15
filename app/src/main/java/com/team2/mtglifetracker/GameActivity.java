@@ -153,21 +153,14 @@ public class GameActivity extends AppCompatActivity {
                 });
                 break;
         }
-        //send starting life to OptionsActivity
-        Intent intent = new Intent(this, OptionsActivity.class);
-        intent.putExtra("startingLife", startingLife);
-        //layoutType....
-        Intent intent2 = new Intent(this, OptionsActivity.class);
-        intent2.putExtra("layoutType", layoutType);
-        //playerCount...
-        Intent intent3 = new Intent(this, OptionsActivity.class);
-        intent3.putExtra("playerCount", playerCount);
-
 
     }
 
     private void openOptions() {
         Intent intent = new Intent(this, OptionsActivity.class);
+        intent.putExtra("startingLife", startingLife);
+        intent.putExtra("layoutType", layoutType);
+        intent.putExtra("playerCount", playerCount);
         startActivity(intent);
     }
 }

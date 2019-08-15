@@ -4,6 +4,7 @@ package com.team2.mtglifetracker;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,7 +12,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class OptionsActivity extends AppCompatActivity {
+    private static final String TAG = OptionsActivity.class.getName();
     private Button button;
+    int layoutType = 0;
+    int playerCount = 0;
+    int startingLife = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +29,10 @@ public class OptionsActivity extends AppCompatActivity {
             playerCount = extras.getInt("playerCount");
             startingLife = extras.getInt("startingLife");
         }
-        //this import currently working dont know how to import layoutType int? string?
-        final int[] startingLife = extras.getIntArray("startingLife");
+
+        Log.i(TAG, "onCreate: layoutType " + layoutType);
+        Log.i(TAG, "onCreate: playerCount " + playerCount);
+        Log.i(TAG, "onCreate: startingLife " + startingLife);
 
 
 
@@ -66,17 +73,18 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                openGame(startingLife);
+                openGame();
             }
         });
 
         }
 
-    private void openGame(int[] startingLife) {
+    private void openGame() {
         Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra("layoutType", layoutType);
+        intent.putExtra("startingLife", startingLife);
+        intent.putExtra("playerCount", playerCount);
         startActivity(intent);
-
-
     }
 
     private void openHome() {
