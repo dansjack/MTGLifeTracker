@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.team2.mtglifetracker.lib.Globals;
 
 public class GameActivity extends AppCompatActivity {
-    int layoutType = 0;
-    int playerCount = 0;
-    int startingLife = 0;
+    private int layoutType = 0;
+    private int playerCount = 0;
+    private int startingLife = 0;
 
 
     @Override
@@ -153,7 +153,6 @@ public class GameActivity extends AppCompatActivity {
                 });
                 break;
         }
-
     }
 
     private void openOptions() {

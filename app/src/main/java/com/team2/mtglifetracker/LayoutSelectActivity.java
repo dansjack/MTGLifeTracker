@@ -9,8 +9,8 @@ import android.widget.Button;
 import com.team2.mtglifetracker.lib.Globals;
 
 public class LayoutSelectActivity extends AppCompatActivity {
-    int playerCount = 0;
-    int startingLife = 0;
+    private int playerCount = 0;
+    private int startingLife = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

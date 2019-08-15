@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import com.team2.mtglifetracker.lib.Globals;
 
 public class PlayerSelectActivity extends AppCompatActivity {
-    int startingLife = 0;
+    private int startingLife = 0;
 
 
     @Override

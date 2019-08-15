@@ -16,9 +16,9 @@ import com.team2.mtglifetracker.lib.Globals;
 public class OptionsActivity extends AppCompatActivity {
     private static final String TAG = OptionsActivity.class.getName();
     private Button button;
-    int layoutType = 0;
-    int playerCount = 0;
-    int startingLife = 0;
+    private int layoutType = 0;
+    private int playerCount = 0;
+    private int startingLife = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
