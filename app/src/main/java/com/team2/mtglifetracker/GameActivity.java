@@ -153,10 +153,14 @@ public class GameActivity extends AppCompatActivity {
                 });
                 break;
         }
+
     }
 
     private void openOptions() {
         Intent intent = new Intent(this, OptionsActivity.class);
+        intent.putExtra("startingLife", startingLife);
+        intent.putExtra("layoutType", layoutType);
+        intent.putExtra("playerCount", playerCount);
         startActivity(intent);
     }
 }
