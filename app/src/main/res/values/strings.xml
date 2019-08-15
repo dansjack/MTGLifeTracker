@@ -39,4 +39,5 @@
     <string name="roll_10_sided_die_string">roll 10-sided die</string>
     <string name="roll_12_sided_die_string">roll 12-sided die</string>
     <string name="roll_20_sided_die_string">roll 20-sided die</string>
+    <string name="begin_string">Begin</string>
 </resources>
