@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.team2.mtglifetracker.lib.Globals;
+
 public class OptionsActivity extends AppCompatActivity {
     private static final String TAG = OptionsActivity.class.getName();
     private Button button;
@@ -29,26 +31,11 @@ public class OptionsActivity extends AppCompatActivity {
             playerCount = extras.getInt("playerCount");
             startingLife = extras.getInt("startingLife");
         }
+        Globals.clearScreen(this);
 
-        Log.i(TAG, "onCreate: layoutType " + layoutType);
-        Log.i(TAG, "onCreate: playerCount " + playerCount);
-        Log.i(TAG, "onCreate: startingLife " + startingLife);
-
-
-
-
-        // this removes the title bar from the activity
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        // hide's the title bar
-        getSupportActionBar().hide();
-
-        // enable full screen
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_options);
 
-        button = findViewById(R.id.button);
+        final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,14 +44,20 @@ public class OptionsActivity extends AppCompatActivity {
         });
 
         //make the home button
-        ImageButton homeBtn = findViewById(R.id.homeBtn);
+        final ImageButton homeBtn = findViewById(R.id.homeBtn);
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHome();
             }
+        });
 
-
+        final ImageButton diceBtn = findViewById(R.id.diceBtn);
+        diceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDice();
+            }
         });
 
         //make the reset button
@@ -85,6 +78,8 @@ public class OptionsActivity extends AppCompatActivity {
         intent.putExtra("startingLife", startingLife);
         intent.putExtra("playerCount", playerCount);
         startActivity(intent);
+
+
     }
 
     private void openHome() {
@@ -92,5 +87,9 @@ public class OptionsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void openDice() {
+        Intent intent = new Intent(this, DiceRoll.class);
+        startActivity(intent);
+    }
 }
 

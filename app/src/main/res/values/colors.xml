@@ -8,7 +8,9 @@
     <color name="green">#05ffa1</color>
     <color name="purple">#b967ff</color>
     <color name="yellow">#FFFB96</color>
+    <color name="peach">#FFD486</color>
+    <color name="salmon">#fe5e78</color>
     <color name="black">#000000</color>
-    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

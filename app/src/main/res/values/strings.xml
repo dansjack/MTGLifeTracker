@@ -25,4 +25,18 @@
     <string name="close_str">Close</string>
     <string name="home_button_str">Home button</string>
     <string name="back_str">Back</string>
+    <string name="select_dice_roll_string">Tap to roll</string>
+    <string name="d20_title_string">20-Sided Dice Roll:</string>
+    <string name="d12_title_string">12-Sided Dice Roll:</string>
+    <string name="d10_title_string">10-Sided Dice Roll:</string>
+    <string name="d8_title_string">8-Sided Dice Roll:</string>
+    <string name="d6_title_string">6-Sided Dice Roll:</string>
+    <string name="d4_title_string">4-Sided Dice Roll:</string>
+    <string name="dice_roll_button_string">Dice roll button</string>
+    <string name="roll_4_sided_die_string">Roll 4-sided die</string>
+    <string name="roll_6_sided_die_string">roll 6-sided die</string>
+    <string name="roll_8_sided_die_string">roll 8-sided die</string>
+    <string name="roll_10_sided_die_string">roll 10-sided die</string>
+    <string name="roll_12_sided_die_string">roll 12-sided die</string>
+    <string name="roll_20_sided_die_string">roll 20-sided die</string>
 </resources>

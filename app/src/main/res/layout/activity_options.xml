@@ -19,7 +19,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/back_str"
         android:textColor="@color/white"
-        android:textSize="48sp" />
+        android:textSize="30sp" />
 
     <ImageButton
         android:id="@+id/homeBtn"
@@ -46,5 +46,16 @@
         android:background="@color/transparent"
         android:contentDescription="@string/home_button_str"
         app:srcCompat="@android:drawable/ic_menu_revert" />
+    <ImageButton
+        android:id="@+id/diceBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="328dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_dice"
+        android:contentDescription="@string/dice_roll_button_string" />
 
 </RelativeLayout>
