@@ -12,7 +12,10 @@
 * [ ] Add status effect counters 
 
 ### Installation
-Simply download this repository and load it from Android Studio.
+```git clone https://github.com/dansjack/Magic-Life.git```
+Load with Android Studio
+
+Magic Life is not currently on the Google Play store.
 
 ### Authors
 MAGIC LIFE was created by:  
