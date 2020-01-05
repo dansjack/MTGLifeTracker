@@ -1,5 +1,5 @@
 # MAGIC LIFE
-## An Android app to keep score through a game of Magic the Gathering
+## An Android app to keep score through a game of _Magic: the Gathering_
 ### Features
 * [x] Track a game for 2-4 players
 * [x] Select any starting score that is a multiple of 10
@@ -13,7 +13,7 @@
 
 ### Installation
 ```git clone https://github.com/dansjack/Magic-Life.git```  
-Load with Android Studio
+Run with the Android emulator in [Android Studio](https://developer.android.com/studio)
 
 Magic Life is not currently on the Google Play store.
 
